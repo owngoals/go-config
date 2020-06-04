@@ -13,7 +13,7 @@ func appConfig() AppConfig {
 	c := AppConfig{}
 
 	c.Name = viper.GetString("app.name")
-	c.Port = viper.GetInt("app.name")
+	c.Port = viper.GetInt("app.port")
 	c.Debug = viper.GetBool("app.debug")
 	c.Node = viper.GetInt("app.node")
 
