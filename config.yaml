@@ -1,0 +1,99 @@
+app:
+  name: go-app-name
+  port: 8000
+  debug: true
+  node: 1
+
+mysql:
+  default:
+    enable: true
+    host: 127.0.0.1
+    port: 3306
+    user: root
+    password: root
+    database: test
+    engine: INNODB
+    charset: utf8mb4
+    collation: utf8mb4_unicode_ci
+  logs_db:
+    enable: true
+    host: 127.0.0.1
+    port: 3306
+    user: root
+    password: root
+    database: logs_db
+    engine: INNODB
+    charset: utf8mb4
+    collation: utf8mb4_unicode_ci
+
+redis:
+  default:
+    enable: true
+    host: 127.0.0.1
+    port: 6379
+    password: password
+    database: 0
+    lock_db: 1
+  abc:
+    enable: false
+    host: 127.0.0.1
+    port: 6379
+    password: abc
+    database: 2
+#    lock_db: 1
+
+mongo:
+  default:
+    enable: true
+    host: 127.0.0.1
+    port: 27018
+    user:
+    password:
+    database: mongo_db_name
+
+rabbitmq:
+  default:
+    enable: false
+    user: root
+    password: root
+    host: 127.0.0.1
+    port: 5672
+
+applog:
+  file:
+    enable: true
+    path: /var/log/applog/app.log
+  elasticsearch:
+    enable: false
+
+aliyun:
+  oss:
+    default:
+      enable: true
+      access-key-id: xxx
+      access-key-secret: xxx
+      endpoint: oss-cn-hongkong.aliyuncs.com
+      bucket: bucket_name
+      domain: cdn.example.com
+    oss2:
+      enable: false
+      access-key-id: xxx
+      access-key-secret: xxx
+      endpoint: oss-cn-hongkong.aliyuncs.com
+      bucket: bucket_name2
+      domain: cdn2.example.com
+
+aws:
+  ses:
+    default:
+      enable: true
+      access-id-key: key_val
+      access-id-secret: secret_val
+      region: us-west-2
+      from-address: no-reply@domain.com
+    ses2:
+      enable: false
+      access-id-key: key_val
+      access-id-secret: secret_val
+      region: us-west-2
+      from-address: no-reply@domain.com
